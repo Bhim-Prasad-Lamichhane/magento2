@@ -79,7 +79,7 @@ class Posts
 
             $logMessage = '';
             foreach ($posts as $post) {
-                $logMessage .= "ID: " . $post['id'] . ", Title: " . $post['title'] . "\n";
+                $logMessage .= "ID: " . $post['id'] . ", Title: " . $post['title'] . ", Body: " . $post['body'] . "\n";
             }
 
             $fileDirectory = BP . '/var/log/posts.log';
