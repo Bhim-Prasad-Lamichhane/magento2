@@ -95,7 +95,17 @@ class Test implements RestapiInterface
             ]
         ];
 
-        return $responseData;
+            // Encode the response data as JSON
+        $jsonResponse = json_encode($responseData);
+
+        // Set the Content-Type header to indicate JSON
+        header('Content-Type: application/json');
+
+        // Output the JSON response
+        echo $jsonResponse;
+
+        // Stop further execution
+        exit;
     }
 
     /**
@@ -170,9 +180,8 @@ public function updatePost($id, $userId, $title, $body)
 
     $connection->update($tableName, $data, ['id = ?' => $id]);
 
-    // Prepare the response
     $responseData = [
-        "status" => true,
+        "status" => true, // Set status to boolean true
         "message" => "Post updated successfully",
         "data" => [
             "id" => $id,
@@ -181,8 +190,18 @@ public function updatePost($id, $userId, $title, $body)
             "body" => $body
         ]
     ];
+    
+    // Encode the response data as JSON
+    $jsonResponse = json_encode($responseData);
 
-    return $responseData;
+    // Set the Content-Type header to indicate JSON
+    header('Content-Type: application/json');
+
+    // Output the JSON response
+    echo $jsonResponse;
+
+    // Stop further execution
+    exit;
 }
 
 
