@@ -1,7 +1,8 @@
 <!-- File: app/code/Intuji/Mymodule/etc/di.xml -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-        
-         <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+    
+    
+  <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
             	<!-- Data Source will be mentioned in listing xml -->
@@ -9,7 +10,6 @@
             </argument>
         </arguments>
     </type>
-
     <virtualType name="Intuji\Mymodule\Model\ResourceModel\Post\Grid\Intujicollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
         	<!-- Table name to insert data and listing data -->
@@ -18,11 +18,5 @@
             <argument name="resourceModel" xsi:type="string">Intuji\Mymodule\Model\ResourceModel\Post</argument>
         </arguments>
     </virtualType>
-    
-    <preference for="Intuji\Mymodule\Api\RestapiInterface" type="Intuji\Mymodule\Model\Test" />
-    <virtualType name="ResourceConnection" type="Magento\Framework\App\ResourceConnection">
-        <arguments>
-            <argument name="resourceName" xsi:type="string">default</argument>
-        </arguments>
-    </virtualType>
+
 </config>

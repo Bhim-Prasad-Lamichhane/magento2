@@ -12,8 +12,8 @@ class Index extends \Magento\Framework\App\Action\Action
 
     public function __construct(
         Context $context,
-        PageFactory $resultPageFactory,
-        CollectionFactory $postCollectionFactory
+        PageFactory $resultPageFactory,     //An instance of PageFactory, which is responsible for creating page results
+        CollectionFactory $postCollectionFactory        //An instance of CollectionFactory, which is responsible for creating collections of Post entities
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->postCollectionFactory = $postCollectionFactory;
@@ -36,3 +36,12 @@ class Index extends \Magento\Framework\App\Action\Action
         return $resultPage;
     }
 }
+
+
+// This method is the main action method (execute) of the controller. It's called when the corresponding route is accessed. Here's what it does:
+
+//     It retrieves a collection of Post entities using the postCollectionFactory.
+//     It retrieves the current page result using the resultPageFactory.
+//     It gets the block named 'myposts' from the layout of the result page.
+//     If the block exists, it sets the data 'posts' with the retrieved posts.
+//     Finally, it returns the result page.

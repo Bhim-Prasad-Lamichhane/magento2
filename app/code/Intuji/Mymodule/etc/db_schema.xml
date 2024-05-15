@@ -16,4 +16,29 @@
            <column name="id" />
        </constraint>
    </table>
+
+    <!-- Define the 'intuji_blog_posts' table -->
+    <table name="intuji_blog_posts" resource="default" engine="innodb" comment="Post Table">
+        <column xsi:type="int" name="post_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Post ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Post Name"/>
+        <column xsi:type="varchar" name="url_key" nullable="true" length="255" comment="Post URL Key"/>
+        <column xsi:type="text" name="post_content" nullable="true" comment="Post Content"/>
+        <column xsi:type="varchar" name="tags" nullable="true" length="255" comment="Post Tags"/>
+        <column xsi:type="int" name="status" padding="10" unsigned="true" nullable="true" comment="Post Status"/>
+        <column xsi:type="varchar" name="featured_image" nullable="true" length="255" comment="Post Featured Image"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="post_id"/>
+        </constraint>
+        <!-- Define index -->
+        <index referenceId="INTUJI_BLOG_POSTS_URL_KEY" indexType="fulltext">
+            <column name="name"/>
+            <column name="url_key"/>
+            <column name="post_content"/>
+            <column name="tags"/>
+            <column name="featured_image"/>
+        </index>
+    </table>
+
 </schema>
