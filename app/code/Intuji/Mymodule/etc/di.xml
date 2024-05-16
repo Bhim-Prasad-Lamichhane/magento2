@@ -5,7 +5,7 @@
         <arguments>
             <argument name="collections" xsi:type="array">
             	<!-- Data Source will be mentioned in listing xml -->
-                <item name="intujiblog_listing_data_source" xsi:type="string">Intjui\Mymodule\Model\ResourceModel\Post\Grid\Intujicollection</item>
+                <item name="intujiblog_listing_data_source" xsi:type="string">Intuji\Mymodule\Model\ResourceModel\Post\Grid\Intujicollection</item>
             </argument>
         </arguments>
     </type>
@@ -25,4 +25,5 @@
             <argument name="resourceName" xsi:type="string">default</argument>
         </arguments>
     </virtualType>
+     
 </config>

@@ -3,7 +3,7 @@
     <update handle="styles"/>
     <body>
         <referenceContainer name="content">
-        <block class="Magento\Backend\Block\Template" template="Intuji_Mymodule::intujiposts.phtml"/>    
-            </referenceContainer>
+             <uiComponent name ="intujiblog_post_listing"/>
+        </referenceContainer>
     </body>
 </page>
