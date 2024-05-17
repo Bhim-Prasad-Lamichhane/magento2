@@ -4,6 +4,5 @@
         <route id="intujiblog" frontName="intujiblog">
             <module name="Intuji_Mymodule"/>
         </route>
-        
     </router>
 </config>

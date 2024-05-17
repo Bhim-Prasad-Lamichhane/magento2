@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Intuji_Blog::intujiblog" title="Intuji Blog" module="Intuji_Mymodule" sortOrder="51" resource="Intuji_Blog::intujiblog"/>
-        <add id="Intuji_Blog::post" title="Manage Posts" module="Intuji_Mymodule" sortOrder="10" action="intujiblog/post" resource="Intuji_Blog::post" parent="Intuji_Blog::intujiblog"/>
+        <add id="Intuji_Mymodule::intujiblog" title="Intuji Blog" module="Intuji_Mymodule" sortOrder="51" resource="Intuji_Mymodule::intujiblog"/>
+        <add id="Intuji_Mymodule::post" title="Manage Posts" module="Intuji_Mymodule" sortOrder="10" action="intujiblog/post" resource="Intuji_Mymodule::post" parent="Intuji_Mymodule::intujiblog"/>
     </menu>
+    
 </config>
 
 <!-- action="intujiblog/post"      intujiblog=>frontName            post=>controllername -->
