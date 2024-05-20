@@ -5,7 +5,7 @@ namespace Intuji\Mymodule\Controller\Adminhtml\Post;
 class Savepost extends \Magento\Backend\App\Action
 {
 	protected $resultPageFactory = false;
-	protected $postFactory;
+	protected $IntujipostFactory;
 
 	public function __construct(
 		\Magento\Backend\App\Action\Context $context,

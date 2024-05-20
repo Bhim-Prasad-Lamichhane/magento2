@@ -1,7 +1,7 @@
 <?php
 namespace Intuji\Mymodule\Model;
  
-use Intuji\Mymodule\Model\ResourceModel\Post\CollectionFactory;
+use Intuji\Mymodule\Model\ResourceModel\Post\IntujicollectionFactory;
  
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
@@ -11,7 +11,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      * @param string $name
      * @param string $primaryFieldName
      * @param string $requestFieldName
-     * @param CollectionFactory $postCollectionFactory
+     * @param IntujicollectionFactory $postIntujicollectionFactory
      * @param array $meta
      * @param array $data
      */
@@ -19,7 +19,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         $name,
         $primaryFieldName,
         $requestFieldName,
-        CollectionFactory $postCollectionFactory,
+        IntujicollectionFactory $postCollectionFactory,
         array $meta = [],
         array $data = []
     ) {
@@ -34,6 +34,13 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      */
     public function getData()
     {
-        return [];
+        $items = $this->collection->getItems();
+        // print_r($items);exit;
+        $this->loadedData = array();
+        /** @var Customer $customer */
+        foreach ($items as $blog) {
+            $this->loadedData[$blog->getId()] = $blog->getData();
+        }
+        return $this->loadedData;
     }
-}   
+}
