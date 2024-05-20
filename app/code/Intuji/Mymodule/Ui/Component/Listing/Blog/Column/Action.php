@@ -11,6 +11,8 @@ class Action extends Column
 {
     /** Url path */
     const ROW_EDIT_URL = 'intujiblog/post/newpost';
+     /** Url path */
+    const ROW_DELETE_URL = 'intujiblog/post/deletepost';
     /** @var UrlInterface */
     protected $_urlBuilder;
 
@@ -49,6 +51,7 @@ class Action extends Column
      */
     public function prepareDataSource(array $dataSource)
     {
+
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
                 $name = $this->getData('name');
@@ -59,6 +62,13 @@ class Action extends Column
                             ['id' => $item['post_id']]
                         ),
                         'label' => __('Edit'),
+                    ];
+                     $item[$name]['delete'] = [
+                        'href' => $this->_urlBuilder->getUrl(
+                            self::ROW_DELETE_URL,
+                            ['id' => $item['post_id']]
+                        ),
+                        'label' => __('Delete'),
                     ];
                 }
             }
