@@ -42,20 +42,7 @@
                 <item name="sortOrder" xsi:type="number">20</item>
             </item>
         </argument>
-           <field name="post_id">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Name</item>
-                    <item name="formElement" xsi:type="string">input</item>
-                    <item name="source" xsi:type="string">intujiblog_form</item>
-                    <item name="dataScope" xsi:type="string">post_id</item>
-                </item>
-            </argument>
-             <settings>
-                      <visible>false</visible>
-             </settings>
-        </field>
+         
         <field name="name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -90,48 +77,7 @@
             </argument>
         </field>
 
-        <field name="tags">
-        <argument name="data" xsi:type="array">
-            <item name="config" xsi:type="array">
-                <item name="dataType" xsi:type="string">text</item>
-                <item name="label" xsi:type="string" translate="true">Tags</item>
-                <item name="formElement" xsi:type="string">input</item>
-                <item name="source" xsi:type="string">intujiblog_form</item>
-                <item name="dataScope" xsi:type="string">tags</item>
-            </item>
-        </argument>
-    </field>
-    
-    <field name="status">
-        <argument name="data" xsi:type="array">
-            <item name="config" xsi:type="array">
-                <item name="dataType" xsi:type="string">boolean</item>
-                <item name="label" xsi:type="string" translate="true">Status</item>
-                <item name="formElement" xsi:type="string">checkbox</item>
-                <item name="source" xsi:type="string">intujiblog_form</item>
-                <item name="dataScope" xsi:type="string">status</item>
-                <item name="prefer" xsi:type="boolean">true</item>
-                <item name="valueMap" xsi:type="array">
-                    <item name="true" xsi:type="string">1</item>
-                    <item name="false" xsi:type="string">0</item>
-                </item>
-            </item>
-        </argument>
-    </field>
-    
-    <field name="featured_image">
-        <argument name="data" xsi:type="array">
-            <item name="config" xsi:type="array">
-                <item name="dataType" xsi:type="string">string</item>
-                <item name="label" xsi:type="string" translate="true">Featured Image</item>
-                <item name="formElement" xsi:type="string">fileUploader</item>
-                <item name="source" xsi:type="string">intujiblog_form</item>
-                <item name="dataScope" xsi:type="string">featured_image</item>
-                <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
-                <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
-            </item>
-        </argument>
-    </field>
+      
 
     </fieldset>
 </form>

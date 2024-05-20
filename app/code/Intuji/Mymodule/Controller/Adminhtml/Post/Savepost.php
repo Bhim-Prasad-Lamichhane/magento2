@@ -10,36 +10,30 @@ class Savepost extends \Magento\Backend\App\Action
 	public function __construct(
 		\Magento\Backend\App\Action\Context $context,
 		\Magento\Framework\View\Result\PageFactory $resultPageFactory,
-		\Intuji\Mymodule\Model\PostFactory $postFactory
+		\Intuji\Mymodule\Model\IntujipostFactory $intujipostFactory
 	)
 	{
-		$this->postFactory = $postFactory;
-		parent::__construct($context);
-		$this->resultPageFactory = $resultPageFactory;
+		$this->intujipostFactory = $intujipostFactory;
+        parent::__construct($context);
+        $this->resultPageFactory = $resultPageFactory;
 	}
 
 	public function execute()
-	{
+		{
+			$data = $this->getRequest()->getPostValue();
 
-       
-		$data = $this->getRequest()->getPostValue();
+			// Instantiate the Intujipost model using the factory
+			$model = $this->intujipostFactory->create();
 
-        echo "<pre>";
-        print_r($data);
-        exit;
-      /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
-        $resultRedirect = $this->resultRedirectFactory->create();
-	     try{
-	     /** @var \Magento\Cms\Model\Page $model */
-	           $model = $this->postFactory->create();
-			   $model->setData($data);
-			   $model->save();
-		    	$this->messageManager->addSuccessMessage(__('You saved the post.'));
-			}catch(\Exception $e){
-				 $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the post.'));
+			$resultRedirect = $this->resultRedirectFactory->create();
+			try {
+				// Set data to the model and save
+				$model->setData($data);
+				$model->save();
+				$this->messageManager->addSuccessMessage(__('You saved the post.'));
+			} catch(\Exception $e) {
+				$this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the post.'));
 			}
-	 return $resultRedirect->setPath('*/*/');
-	}
-
-
+			return $resultRedirect->setPath('*/*/');
+		}
 }
