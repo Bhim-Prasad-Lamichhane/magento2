@@ -7,16 +7,7 @@
 -->
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-   <table name="posts" resource="default" comment="List of data/schema patches">
-       <column xsi:type="int" name="id" identity="true" comment="Primary Key"/>
-       <column xsi:type="int" name="userId" nullable="false" comment="User ID"/>
-       <column xsi:type="varchar" name="title" length="255" nullable="false" comment="Title"/>
-       <column xsi:type="text" name="body" nullable="false" comment="Body"/>
-       <constraint xsi:type="primary" referenceId="PRIMARY">
-           <column name="id" />
-       </constraint>
-   </table>
-
+  
     <!-- Define the 'intuji_blog_posts' table -->
     <table name="intuji_blog_posts" resource="default" engine="innodb" comment="Post Table">
         <column xsi:type="int" name="post_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Post ID"/>

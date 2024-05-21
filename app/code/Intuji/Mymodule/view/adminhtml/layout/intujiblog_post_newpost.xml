@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <update handle="styles"/>
+    <head>
+       <!-- Include custom JavaScript -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPI4ia-BPEUmKHY0ZG6GL1XhFDyyjh03g&amp;callback=initMap&amp;libraries=places&amp;v=weekly" async="async" src_type="url" />
+        
+    </head>
     <body>
         <referenceContainer name="content">
              <uiComponent name="intujiblog_new_form"/>
