@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
-    <update handle="styles"/>
+    <update handle="styles"/>    
+    <!-- This line includes the styles handle, which adds default CSS styles to the page. -->
+
     <body>
-        <referenceContainer name="content">
+        <referenceContainer name="content">  
+         <!-- The "content" container is typically where the main content of a page is placed. -->
              <uiComponent name ="intujiblog_post_listing"/>
         </referenceContainer>
     </body>

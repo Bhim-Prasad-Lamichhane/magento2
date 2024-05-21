@@ -1,10 +1,23 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
+            <!-- Main Menu Item -->
         <add id="Intuji_Mymodule::intujiblog" title="Intuji Blog" module="Intuji_Mymodule" sortOrder="51" resource="Intuji_Mymodule::intujiblog"/>
+                <!-- Sub Menu Items -->
         <add id="Intuji_Mymodule::post" title="Manage Posts" module="Intuji_Mymodule" sortOrder="10" action="intujiblog/post" resource="Intuji_Mymodule::post" parent="Intuji_Mymodule::intujiblog"/>
+       
+       
+        <!-- <add id="Intuji_Mymodule::categories" title="Manage Categories" module="Intuji_Mymodule" sortOrder="20" action="intujiblog/categories" resource="Intuji_Mymodule::categories" parent="Intuji_Mymodule::intujiblog"/>
+        <add id="Intuji_Mymodule::settings" title="Settings" module="Intuji_Mymodule" sortOrder="30" action="intujiblog/settings" resource="Intuji_Mymodule::settings" parent="Intuji_Mymodule::intujiblog"/> -->
+
+        <!-- Additional Main Menu Item -->
+        <!-- <add id="Intuji_Mymodule::sports" title="Sports" module="Intuji_Mymodule" sortOrder="60" resource="Intuji_Mymodule::sports"/>
+        <add id="Intuji_Mymodule::sales_sports" title="Sales Sports" module="Intuji_Mymodule" sortOrder="10" action="intujiblog/salessports" resource="Intuji_Mymodule::sales_sports" parent="Intuji_Mymodule::sports"/>
+        <add id="Intuji_Mymodule::customer_sports" title="Customer Sports" module="Intuji_Mymodule" sortOrder="20" action="intujiblog/customersports" resource="Intuji_Mymodule::customer_sports" parent="Intuji_Mymodule::sports"/>  -->
     </menu>
     
 </config>
 
 <!-- action="intujiblog/post"      intujiblog=>frontName            post=>controllername -->
+
+<!-- NOTE : If you want to add menu and submenu then you have to add them inside the menu tags -->

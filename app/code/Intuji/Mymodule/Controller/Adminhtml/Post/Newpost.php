@@ -19,8 +19,14 @@ class Newpost extends \Magento\Backend\App\Action
 	{
 		
 		$resultPage = $this->resultPageFactory->create();
+		$id = $this->getRequest()->getparam('id');
+		if(!empty($id)){
+			$resultPage->getConfig()->getTitle()->prepend((__('Edit Blog')));
+		}else{
+			$resultPage->getConfig()->getTitle()->prepend((__('Add New Blog')));
+
+		}
 		
-		$resultPage->getConfig()->getTitle()->prepend((__('Add New Blog')));
 
 		return $resultPage;
 	}

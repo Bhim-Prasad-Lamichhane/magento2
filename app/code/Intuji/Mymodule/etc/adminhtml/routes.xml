@@ -4,5 +4,9 @@
         <route id="intujiblog" frontName="intujiblog">
             <module name="Intuji_Mymodule"/>
         </route>
+        
+        <!-- Add routes for new menu items -->
+        <!-- <route id="intujiblog_sales_sports" frontName="intujiblog" />
+        <route id="intujiblog_customer_sports" frontName="intujiblog" /> -->
     </router>
 </config>

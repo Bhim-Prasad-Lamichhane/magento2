@@ -14,6 +14,8 @@
                 <item name="label" xsi:type="string" translate="true">Add New Blog</item>
                 <item name="class" xsi:type="string">primary</item>
                 <item name="url" xsi:type="string">*/*/newpost</item>
+                <!-- */*/newpost  :: * => Intuji_Mymodule,   * => Post(controllername) newpost=>represents the action method within the controller (newpostAction). -->
+            <!-- from here it redirects to the Newpost.php class of Post Controller -->
             </item>
         </item>
     </argument>

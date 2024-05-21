@@ -16,8 +16,9 @@
             <item name="delete" xsi:type="string">Intuji\Mymodule\Block\Adminhtml\Edit\Button\Delete</item>
 
         </item>
-        
-    </argument>
+        <!-- from here when we click onthe save button then it redirects to the path : intujiblog/post/savepost  from line 35 -->
+         <!-- execution flow is as follows: Save button block (Save.php) -> Savepost controller action (Savepost.php). -->
+    </argument> 
     <dataSource name="intujiblog_form_data_source">
     
         <argument name="dataProvider" xsi:type="configurableObject">
