@@ -10,19 +10,13 @@
         </arguments>
     </type>
 
+   
     <virtualType name="Intuji\Mymodule\Model\ResourceModel\Post\Grid\Intujicollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
         	<!-- Table name to insert data and listing data -->
             <argument name="mainTable" xsi:type="string">intuji_blog_posts</argument>
             <!-- Resource model name -->
             <argument name="resourceModel" xsi:type="string">Intuji\Mymodule\Model\ResourceModel\Post</argument>
-        </arguments>
-    </virtualType>
-    
-    <preference for="Intuji\Mymodule\Api\RestapiInterface" type="Intuji\Mymodule\Model\Test" />
-    <virtualType name="ResourceConnection" type="Magento\Framework\App\ResourceConnection">
-        <arguments>
-            <argument name="resourceName" xsi:type="string">default</argument>
         </arguments>
     </virtualType>
      
