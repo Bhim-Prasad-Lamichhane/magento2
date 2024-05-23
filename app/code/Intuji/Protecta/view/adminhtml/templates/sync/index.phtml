@@ -1,0 +1,42 @@
+<div class="admin__page-section">
+    <div class="admin__page-section-item">
+        <button id="sync-all-button" class="action-secondary">
+            <?= __('Sync All') ?>
+        </button>
+    </div>
+    <div class="admin__page-section-item">
+        <input type="text" id="sync-input" placeholder="Enter value...">
+        <button id="sync-button" class="action-primary">
+            <?= __('Sync') ?>
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'Magento_Ui/js/modal/alert'], function($, alert) {
+        $('#sync-all-button').on('click', function() {
+            alert({
+                title: 'Sync Files',
+                content: 'Sync Catalog Files From OneDrive',
+                actions: {
+                    always: function() {
+                        console.log('Sync All clicked');
+                    }
+                }
+            });
+        });
+
+        $('#sync-button').on('click', function() {
+            var value = $('#sync-input').val();
+            alert({
+                title: 'Sync File',
+                content: 'Syncing file with value: ' + value,
+                actions: {
+                    always: function() {
+                        console.log('Sync clicked with value: ' + value);
+                    }
+                }
+            });
+        });
+    });
+</script>
