@@ -4,7 +4,7 @@
        <referenceBlock name="product.info.details">
            <block class="Magento\Catalog\Block\Product\View" name="custom.tab" template="Intuji_Customtab::custom_tab.phtml" group="detailed_info" >
                <arguments>
-                   <argument translate="true" name="title" xsi:type="string">Details Info</argument>
+                   <argument translate="true" name="title" xsi:type="string">Custom tab</argument>
                </arguments>
            </block>
        </referenceBlock>
