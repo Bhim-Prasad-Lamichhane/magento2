@@ -1,0 +1,13 @@
+<!-- app/code/Vendor/Module/view/frontend/templates/product/view/details.phtml -->
+
+<?php
+/** @var \Vendor\Module\Block\Product\CustomDescription $block */
+$customDescription = $block->getCustomDescription();
+?>
+
+<?php if ($customDescription): ?>
+    <div class="custom-description">
+        <h2>Custom Description</h2>
+        <p><?php echo $block->escapeHtml($customDescription); ?></p>
+    </div>
+<?php endif; ?>
