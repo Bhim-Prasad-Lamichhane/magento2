@@ -6,4 +6,4 @@
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Intuji_Customtab', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Intuji_Custompayment', __DIR__);
