@@ -18,7 +18,7 @@
                                                             <!-- merge payment method renders here -->
                                                             <item name="children" xsi:type="array">
                                                                 <item name="testpayment" xsi:type="array">
-                                                                    <item name="component" xsi:type="string">Intuji_Custompayment/js/view/payment/method-renderer/testpayment</item>
+                                                                    <item name="component" xsi:type="string">Thecoachsmb_CustomPayment/js/view/payment/method-renderer</item>
                                                                     <item name="methods" xsi:type="array">
                                                                         <item name="testpayment" xsi:type="array">
                                                                             <item name="isBillingAddressRequired" xsi:type="boolean">true</item>

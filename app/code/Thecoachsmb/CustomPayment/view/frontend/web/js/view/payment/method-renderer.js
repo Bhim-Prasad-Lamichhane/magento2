@@ -1,10 +1,9 @@
 define(
-    [   'ko',
+    [
         'uiComponent',
         'Magento_Checkout/js/model/payment/renderer-list'
     ],
     function (
-        ko,
         Component,
         rendererList
     ) {
@@ -12,7 +11,7 @@ define(
         rendererList.push(
             {
                 type: 'testpayment',
-                component: 'Intuji_Custompayment/js/view/payment/method-renderer/testpayment'
+                component: 'Thecoachsmb_CustomPayment/js/view/payment/method-renderer/testpayment'
             }
         );
         return Component.extend({});

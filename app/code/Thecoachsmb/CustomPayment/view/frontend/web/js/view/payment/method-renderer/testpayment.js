@@ -1,6 +1,5 @@
 define(
-    [   
-        'ko',
+    [
         'Magento_Checkout/js/view/payment/default'
     ],
     function (Component) {
@@ -8,7 +7,7 @@ define(
 
         return Component.extend({
             defaults: {
-                template: 'Intuji_Custompayment/payment/testpayment'
+                template: 'Thecoachsmb_CustomPayment/payment/testpayment'
             }
         });
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Intuji\Custompayment\Model;
+namespace Thecoachsmb\CustomPayment\Model;
 
 /**
  * Pay In Store payment method model
