@@ -1,0 +1,41 @@
+<?php
+/** @var $block \Magento\Checkout\Block\Onepage\Success */
+$order = $block->getOrder();
+$paymentMethod = $order->getPayment()->getMethod();
+?>
+
+<div class="checkout-success">
+    <?php if ($paymentMethod == 'checkmo'): // Check / Money Order ?>
+        <h2 style="color:blue;font-size:bold;">Thank you for your order!</h2>
+        <h1 style="color:green">You have chosen to pay by Check / Money Order.</h1>
+        <p>We will process your order once we receive your payment. Please follow the instructions in the email to complete your payment.</p>
+        
+    <?php elseif ($paymentMethod == 'banktransfer'): // Bank Transfer Payment ?>
+        <h2 style="color:blue;font-size:bold;">Thank you for your order!</h2>
+        <h1 style="color:green">You have chosen to pay by Bank Transfer.</h1>
+        <p>We will process your order once we receive your payment. Please follow the instructions in the email to complete your bank transfer.</p>
+        
+    <?php elseif ($paymentMethod == 'testpayment'): // Custom Payment Method ?>
+        <h2 style="color:red;font-size:bold;">Testing Features</h2>
+        <h1 style="color:green">Thank you for shopping with us! You will receive your product soon...</h1>
+        <p style="color:red">We will send you an order confirmation email with details and tracking information.</p>
+        <p style="color:red">You can track your order status and view the history of your orders by visiting <a href="<?php echo $block->getUrl('sales/order/history') ?>">My Orders</a> page in your account.</p>
+
+    <?php else: // Default message for other payment methods ?>
+        <h1><?php echo __('Thank you for your purchase!') ?></h1>
+        <?php if ($block->getOrderId()) :?>
+            <?php if ($block->getCanViewOrder()) :?>
+                <p><?= $block->escapeHtml(__('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeUrl($block->getViewOrderUrl()), $block->getOrderId())), ['a', 'strong']) ?></p>
+            <?php else :?>
+                <p><?= $block->escapeHtml(__('Your order # is: <span>%1</span>.', $block->getOrderId()), ['span']) ?></p>
+            <?php endif;?>
+            <p><?= $block->escapeHtml(__('We\'ll email you an order confirmation with details and tracking info.')) ?></p>
+        <?php endif;?>
+        <?= $block->getAdditionalInfoHtml() ?>
+    <?php endif; ?>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <a class="action primary continue" href="<?= $block->escapeUrl($block->getContinueUrl()) ?>"><span><?= $block->escapeHtml(__('Continue Shopping')) ?></span></a>
+        </div>
+    </div>
+</div>
